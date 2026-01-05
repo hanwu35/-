@@ -1,0 +1,107 @@
+{
+  "name": "AI健康检测系统",
+
+  // 使用 Java 17 + Python 3.11 的官方镜像
+  "image": "mcr.microsoft.com/devcontainers/java:17",
+
+  // 添加 Python 和 MySQL 客户端
+  "features": {
+    "ghcr.io/devcontainers/features/python:1": {
+      "version": "3.11",
+      "installTools": true
+    },
+    "ghcr.io/devcontainers/features/mysql-client:1": {
+      "version": "8.0"
+    },
+    "ghcr.io/devcontainers-contrib/features/keras:2": {}
+  },
+
+  // VS Code 扩展
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        // Java
+        "vscjava.vscode-java-pack",
+        "vscjava.vscode-gradle",
+        "vmware.vscode-spring-boot-dashboard",
+        "vscjava.vscode-spring-initializr",
+
+        // Python
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-toolsai.jupyter",
+
+        // Docker 和数据库
+        "ms-azuretools.vscode-docker",
+        "mtxr.sqltools",
+        "mtxr.sqltools-driver-mysql",
+
+        // 工具类
+        "github.copilot",
+        "eamodio.gitlens"
+      ],
+
+      "settings": {
+        // Java 设置
+        "java.home": "/docker-java-home",
+        "java.jdt.ls.vmargs": "-Xmx4G",
+
+        // Python 设置
+        "python.defaultInterpreterPath": "/usr/local/bin/python",
+        "python.analysis.extraPaths": [
+          "${workspaceFolder}/src/main/python",
+          "${workspaceFolder}/scripts"
+        ],
+
+        // 通用设置
+        "editor.formatOnSave": true,
+        "files.autoSave": "afterDelay"
+      }
+    }
+  },
+
+  // 环境变量（匹配你的 application.properties）
+  "remoteEnv": {
+    "MYSQL_URL": "jdbc:mysql://localhost:3306/ai_health_check?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true",
+    "MYSQL_USERNAME": "hanwu",
+    "MYSQL_PASSWORD": "WDz18708835370",
+    "JAVA_HOME": "/docker-java-home",
+    "SPRING_PROFILES_ACTIVE": "dev",
+    "SERVER_PORT": "8080",
+
+    // Python 相关
+    "PYTHONPATH": "${containerWorkspaceFolder}/src/main/python:${containerWorkspaceFolder}/scripts",
+    "TF_CPP_MIN_LOG_LEVEL": "2"  // 减少 TensorFlow 日志
+  },
+
+  // 端口转发
+  "forwardPorts": [
+    8080,  // Spring Boot
+    3306,  // MySQL（本地连接用）
+    5000   // Python Flask 服务（如果有）
+  ],
+
+  "portsAttributes": {
+    "8080": {
+      "label": "Spring Boot 应用",
+      "onAutoForward": "openPreview"
+    },
+    "3306": {
+      "label": "MySQL 数据库",
+      "onAutoForward": "notify"
+    }
+  },
+
+  // 容器启动后执行的命令
+  "postCreateCommand": "bash .devcontainer/setup.sh",
+
+  // 工作目录
+  "workspaceFolder": "/workspace",
+
+  // 挂载的卷（缓存优化）
+  "mounts": [
+    "source=gradle-cache,target=/root/.gradle,type=volume",
+    "source=python-packages,target=/usr/local/lib/python3.11/site-packages,type=volume",
+    "source=m2-repo,target=/root/.m2,type=volume"
+  ]
+}
