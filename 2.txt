@@ -1,0 +1,602 @@
+ ./gradlew bootRun
+
+> Task :bootRun
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.0)
+
+2025-12-24 14:34:26 [restartedMain] INFO  c.e.a.AiHealthCheckApplication - Starting AiHealthCheckApplication using Java 17.0.17 with PID 17132 (D:\妗岄潰\854\build\classes\java\mastarted by lenovo in D:\妗岄潰\854)
+2025-12-24 14:34:26 [restartedMain] DEBUG c.e.a.AiHealthCheckApplication - Running with Spring Boot v3.2.0, Spring v6.1.1
+2025-12-24 14:34:26 [restartedMain] INFO  c.e.a.AiHealthCheckApplication - No active profile set, falling back to 1 default profile: "default"
+2025-12-24 14:34:26 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-12-24 14:34:26 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-12-24 14:34:28 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-24 14:34:28 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 218 ms. Found 17 JPA repository interfaces.
+2025-12-24 14:34:30 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-12-24 14:34:30 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-12-24 14:34:30 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-12-24 14:34:30 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-12-24 14:34:30 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3705 ms
+2025-12-24 14:34:30 [restartedMain] DEBUG o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+2025-12-24 14:34:30 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-24 14:34:31 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-12-24 14:34:31 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-24 14:34:31 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-24 14:34:31 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-24 14:34:32 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@471e4194
+2025-12-24 14:34:32 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-24 14:34:32 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-12-24 14:34:32 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-12-24 14:34:32 [restartedMain] DEBUG o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(12, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@e6c4a1c) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@3e42e0f6)
+2025-12-24 14:34:32 [restartedMain] DEBUG o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(-9, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@107009c5) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@16354486)
+2025-12-24 14:34:32 [restartedMain] DEBUG o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(-3, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@7ae5d0f6) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@5309da0c)
+2025-12-24 14:34:32 [restartedMain] DEBUG o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(4003, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@4327cf89) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@7f8aa21f)
+2025-12-24 14:34:32 [restartedMain] DEBUG o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(4001, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@2b3cbf78) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@36f8d9a9)
+2025-12-24 14:34:32 [restartedMain] DEBUG o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(4002, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@4bde0378) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@61eeca46)
+2025-12-24 14:34:32 [restartedMain] DEBUG o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(2004, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@2fe76e7c) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@5f22cfb8)
+2025-12-24 14:34:32 [restartedMain] DEBUG o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(2005, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@645cd2e7) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@737798d0)
+2025-12-24 14:34:32 [restartedMain] DEBUG o.h.t.d.sql.spi.DdlTypeRegistry - addDescriptor(2011, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@67f79c4c) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@2e61d005)
+2025-12-24 14:34:35 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-24 14:34:35 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-24 14:34:35 [restartedMain] INFO  c.e.a.config.LoggingConfig - ==============================
+2025-12-24 14:34:35 [restartedMain] INFO  c.e.a.config.LoggingConfig - AI鍋ュ悍妫?鏌ョ郴缁熷惎鍔?
+2025-12-24 14:34:35 [restartedMain] INFO  c.e.a.config.LoggingConfig - 鏃ュ織绾у埆閰嶇疆瀹屾垚
+2025-12-24 14:34:35 [restartedMain] INFO  c.e.a.config.LoggingConfig - 鏃ュ織鏂囦欢: logs/application.log
+2025-12-24 14:34:35 [restartedMain] INFO  c.e.a.config.LoggingConfig - ==============================
+2025-12-24 14:34:35 [restartedMain] DEBUG o.s.d.j.r.c.JpaMetamodelMappingContextFactoryBean - Initializing JpaMetamodelMappingContext鈥?
+2025-12-24 14:34:35 [restartedMain] DEBUG o.s.d.j.r.c.JpaMetamodelMappingContextFactoryBean - Finished initializing JpaMetamodelMappingContext
+2025-12-24 14:34:35 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:35 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:35 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:35 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query ModelFile.findByIsActiveTrue
+2025-12-24 14:34:35 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query ModelFile.findByIsActiveTrue
+2025-12-24 14:34:35 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:35 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query ModelFile.findByName
+2025-12-24 14:34:35 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query ModelFile.findByName
+2025-12-24 14:34:35 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:36 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query ModelFile.findByModelType
+2025-12-24 14:34:36 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query ModelFile.findByModelType
+2025-12-24 14:34:36 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:36 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query ModelFile.findByIsActive
+2025-12-24 14:34:36 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query ModelFile.findByIsActive
+2025-12-24 14:34:36 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:36 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:36 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:36 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query User.findByAccount
+2025-12-24 14:34:36 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query User.findByAccount
+2025-12-24 14:34:36 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:36 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query User.findByAccountAndPassword
+2025-12-24 14:34:36 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query User.findByAccountAndPassword
+2025-12-24 14:34:36 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:36 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query User.existsByAccount
+2025-12-24 14:34:36 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query User.existsByAccount
+2025-12-24 14:34:36 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:36 [restartedMain] TRACE o.s.t.a.AnnotationTransactionAttributeSource - Adding transactional method 'com.example.aihealthcheck.service.UserService.count' with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2025-12-24 14:34:36 [restartedMain] TRACE o.s.t.a.AnnotationTransactionAttributeSource - Adding transactional method 'com.example.aihealthcheck.service.UserService.delete' with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2025-12-24 14:34:36 [restartedMain] TRACE o.s.t.a.AnnotationTransactionAttributeSource - Adding transactional method 'com.example.aihealthcheck.service.UserService.save' with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2025-12-24 14:34:36 [restartedMain] TRACE o.s.t.a.AnnotationTransactionAttributeSource - Adding transactional method 'com.example.aihealthcheck.service.UserService.exists' with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2025-12-24 14:34:36 [restartedMain] TRACE o.s.t.a.AnnotationTransactionAttributeSource - Adding transactional method 'com.example.aihealthcheck.service.UserService.findById' with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2025-12-24 14:34:36 [restartedMain] TRACE o.s.t.a.AnnotationTransactionAttributeSource - Adding transactional method 'com.example.aihealthcheck.service.UserService.login' with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2025-12-24 14:34:36 [restartedMain] TRACE o.s.t.a.AnnotationTransactionAttributeSource - Adding transactional method 'com.example.aihealthcheck.service.UserService.countUsersByCategory' with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2025-12-24 14:34:36 [restartedMain] TRACE o.s.t.a.AnnotationTransactionAttributeSource - Adding transactional method 'com.example.aihealthcheck.service.UserService.resetPassword' with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2025-12-24 14:34:36 [restartedMain] TRACE o.s.t.a.AnnotationTransactionAttributeSource - Adding transactional method 'com.example.aihealthcheck.service.UserService.changePassword' with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2025-12-24 14:34:36 [restartedMain] TRACE o.s.t.a.AnnotationTransactionAttributeSource - Adding transactional method 'com.example.aihealthcheck.service.UserService.existsByAccount' with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2025-12-24 14:34:36 [restartedMain] TRACE o.s.t.a.AnnotationTransactionAttributeSource - Adding transactional method 'com.example.aihealthcheck.service.UserService.getPatients' with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2025-12-24 14:34:36 [restartedMain] TRACE o.s.t.a.AnnotationTransactionAttributeSource - Adding transactional method 'com.example.aihealthcheck.service.UserService.getDoctors' with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2025-12-24 14:34:36 [restartedMain] TRACE o.s.t.a.AnnotationTransactionAttributeSource - Adding transactional method 'com.example.aihealthcheck.service.UserService.registerUser' with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2025-12-24 14:34:36 [restartedMain] TRACE o.s.t.a.AnnotationTransactionAttributeSource - Adding transactional method 'com.example.aihealthcheck.service.UserService.getUserById' with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2025-12-24 14:34:36 [restartedMain] TRACE o.s.t.a.AnnotationTransactionAttributeSource - Adding transactional method 'com.example.aihealthcheck.service.UserService.searchUsers' with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2025-12-24 14:34:36 [restartedMain] TRACE o.s.t.a.AnnotationTransactionAttributeSource - Adding transactional method 'com.example.aihealthcheck.service.UserService.createUser' with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2025-12-24 14:34:36 [restartedMain] TRACE o.s.t.a.AnnotationTransactionAttributeSource - Adding transactional method 'com.example.aihealthcheck.service.UserService.getAllUsers' with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2025-12-24 14:34:36 [restartedMain] TRACE o.s.t.a.AnnotationTransactionAttributeSource - Adding transactional method 'com.example.aihealthcheck.service.UserService.findByAccount' with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2025-12-24 14:34:36 [restartedMain] TRACE o.s.t.a.AnnotationTransactionAttributeSource - Adding transactional method 'com.example.aihealthcheck.service.UserService.getUsersByCategory' with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2025-12-24 14:34:36 [restartedMain] TRACE o.s.t.a.AnnotationTransactionAttributeSource - Adding transactional method 'com.example.aihealthcheck.service.UserService.updateUser' with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2025-12-24 14:34:36 [restartedMain] TRACE o.s.t.a.AnnotationTransactionAttributeSource - Adding transactional method 'com.example.aihealthcheck.service.UserService.deleteUser' with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2025-12-24 14:34:36 [restartedMain] TRACE o.s.t.a.AnnotationTransactionAttributeSource - Adding transactional method 'com.example.aihealthcheck.service.UserService.validateCredentials' with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2025-12-24 14:34:36 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:36 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:36 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-12-24 14:34:36 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query HealthBlood.findHighRiskRecords.count
+2025-12-24 14:34:36 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:36 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query HealthBlood.findByUserIdAndDateRange.count
+2025-12-24 14:34:36 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:36 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query HealthBlood.findByRiskLevelAndUserId
+2025-12-24 14:34:36 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query HealthBlood.findByRiskLevelAndUserId
+2025-12-24 14:34:36 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:36 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query HealthBlood.findByUserIdAndCheckDate
+2025-12-24 14:34:36 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query HealthBlood.findByUserIdAndCheckDate
+2025-12-24 14:34:36 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:36 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query HealthBlood.findByRiskLevel
+2025-12-24 14:34:36 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query HealthBlood.findByRiskLevel
+2025-12-24 14:34:36 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:36 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query HealthBlood.countPredictionsByUserId.count
+2025-12-24 14:34:36 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:36 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query HealthBlood.existsPrediction.count
+2025-12-24 14:34:36 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query HealthBlood.countByUserId
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query HealthBlood.countByUserId
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query HealthBlood.findByUserIdOrderByCheckDateDesc
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query HealthBlood.findByUserIdOrderByCheckDateDesc
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query HealthBlood.findHighRiskRecordsByUserId.count
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query HealthBlood.countByUserIdAndRiskLevel
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query HealthBlood.countByUserIdAndRiskLevel
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query HealthBlood.findByUserId
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query HealthBlood.findByUserId
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query HealthBlood.findLatestPredictionsByUserId.count
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query HealthUrine.findByUserIdAndDateRange.count
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query HealthUrine.countByUserId
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query HealthUrine.countByUserId
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query HealthUrine.findByUserIdOrderByCheckDateDesc
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query HealthUrine.findByUserIdOrderByCheckDateDesc
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query HealthUrine.existsPrediction.count
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query HealthUrine.findHighRiskRecords.count
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query HealthUrine.findByRiskLevelAndUserId
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query HealthUrine.findByRiskLevelAndUserId
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query HealthUrine.findByUserId
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query HealthUrine.findByUserId
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query HealthUrine.countByUserIdAndRiskLevel
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query HealthUrine.countByUserIdAndRiskLevel
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query HealthUrine.findByRiskLevel
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query HealthUrine.findByRiskLevel
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query HealthUrine.findByUserIdAndCheckDate
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query HealthUrine.findByUserIdAndCheckDate
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query HealthLiver.findByUserIdAndDateRange.count
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query HealthLiver.findByUserIdOrderByCheckDateDesc
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query HealthLiver.findByUserIdOrderByCheckDateDesc
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query HealthLiver.existsPrediction.count
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query HealthLiver.findByRiskLevel
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query HealthLiver.findByRiskLevel
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query HealthLiver.findByUserIdAndCheckDate
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query HealthLiver.findByUserIdAndCheckDate
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query HealthLiver.findByUserId
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query HealthLiver.findByUserId
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query HealthKidney.findByRiskLevel
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query HealthKidney.findByRiskLevel
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query HealthKidney.findByUserIdAndCheckDate
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query HealthKidney.findByUserIdAndCheckDate
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query HealthKidney.findByUserId
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query HealthKidney.findByUserId
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query HealthKidney.findByUserIdAndDateRange.count
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query HealthKidney.findByUserIdOrderByCheckDateDesc
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query HealthKidney.findByUserIdOrderByCheckDateDesc
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query HealthKidney.existsPrediction.count
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query Department.findByDeptName
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query Department.findByDeptName
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query Department.searchByKeyword.count
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query Department.findAllByOrderByDeptNameAsc
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query Department.findAllByOrderByDeptNameAsc
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query Department.existsByDeptCode
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query Department.existsByDeptCode
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query Department.findByDeptCode
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query Department.findByDeptCode
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query Doctor.countByDeptId.count
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query Doctor.findByLevel
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query Doctor.findByLevel
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query Doctor.findByDeptCode.count
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query Doctor.findAllOrderByFee.count
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query Doctor.findByUserId
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query Doctor.findByUserId
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query Doctor.findAllOrderByName.count
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query Doctor.findByDoctorCode
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query Doctor.findByDoctorCode
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query Doctor.findByDepartment
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query Doctor.findByDepartment
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query Doctor.findByDepartment
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query Doctor.findByDepartment
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query HealthBloodItem.findByUserId.count
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query HealthBloodItem.findByUserIdAndCheckDate.count
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query HealthBloodItem.countDistinctDatesByUserId.count
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query HealthBloodItem.findTopByUserIdOrderByCheckDateDesc.count
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query HealthBloodItem.existsByUserIdAndCheckDate.count
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query HealthBloodItem.findByUserIdAndFeatureName.count
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query HealthBloodItem.findDistinctDatesByUserId.count
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query HealthBloodItem.findByUserIdAndCheckDateAndItemName.count
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query HealthUrineItem.findByUserIdAndCheckDateAndItemName.count
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query HealthUrineItem.findDistinctDatesByUserId.count
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query HealthUrineItem.findByUserId.count
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query HealthUrineItem.findTopByUserIdOrderByCheckDateDesc.count
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query HealthUrineItem.existsByUserIdAndCheckDate.count
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query HealthUrineItem.findByUserIdAndCheckDate.count
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query HealthLiverItem.findDistinctDatesByUserId.count
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query HealthLiverItem.findByUserIdAndCheckDateAndItemName.count
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query HealthLiverItem.findByUserId.count
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query HealthLiverItem.findByUserIdAndCheckDate.count
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query HealthLiverItem.findTopByUserIdOrderByCheckDateDesc.count
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query HealthLiverItem.existsByUserIdAndCheckDate.count
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query HealthKidneyItem.findByUserId.count
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query HealthKidneyItem.findTopByUserIdOrderByCheckDateDesc.count
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query HealthKidneyItem.existsByUserIdAndCheckDate.count
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query HealthKidneyItem.findByUserIdAndCheckDate.count
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query HealthKidneyItem.findByUserIdAndCheckDateAndItemName.count
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query HealthKidneyItem.findDistinctDatesByUserId.count
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query ItemMappingConfig.findByFeatureName
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query ItemMappingConfig.findByFeatureName
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query ItemMappingConfig.findAllFeatureNames.count
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query ItemMappingConfig.findByChineseName.count
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query ItemMappingConfig.findByKeyword.count
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query ItemMappingConfig.findByFeatureNames.count
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query ItemMappingConfig.findByCategory
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query ItemMappingConfig.findByCategory
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query ItemMappingConfig.findByCategoryAndValueType.count
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query HealthFeatures.findKidneyFeaturesByUserId.count
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query HealthFeatures.findBloodFeaturesByUserId.count
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query HealthFeatures.findLiverFeaturesByUserId.count
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query HealthFeatures.countByUserId.count
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query HealthFeatures.findByUserId.count
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query HealthFeatures.existsByUserIdAndCheckDate.count
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query HealthFeatures.findUrineFeaturesByUserId.count
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query HealthFeatures.findByUserIdAndCheckDate.count
+2025-12-24 14:34:37 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:37 [restartedMain] TRACE o.s.t.a.AnnotationTransactionAttributeSource - Adding transactional method 'com.example.aihealthcheck.service.FeatureExtractionService.extractFeaturesForUserAndDate' with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2025-12-24 14:34:37 [restartedMain] TRACE o.s.t.a.AnnotationTransactionAttributeSource - Adding transactional method 'com.example.aihealthcheck.service.FeatureExtractionService.extractFeaturesForUser' with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2025-12-24 14:34:38 [restartedMain] TRACE o.s.t.a.AnnotationTransactionAttributeSource - Adding transactional method 'com.example.aihealthcheck.service.prediction.ModelPredictionService.triggerAllModelPredictions' with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2025-12-24 14:34:38 [restartedMain] TRACE o.s.t.a.AnnotationTransactionAttributeSource - Adding transactional method 'com.example.aihealthcheck.service.prediction.ModelPredictionService.savePredictionResult' with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2025-12-24 14:34:38 [restartedMain] TRACE o.s.t.a.AnnotationTransactionAttributeSource - Adding transactional method 'com.example.aihealthcheck.service.HealthDataExcelService.processHealthDataExcel' with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2025-12-24 14:34:38 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:38 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:38 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query HealthIndicator.countByUserId.count
+2025-12-24 14:34:38 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:38 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query HealthIndicator.findByUserId.count
+2025-12-24 14:34:38 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:38 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query HealthIndicator.findByUserIdAndCheckDate.count
+2025-12-24 14:34:38 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:38 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:38 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:38 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Looking up named query HealthRecord.findByUserOrderByCreatedAtDesc
+2025-12-24 14:34:38 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query HealthRecord.findByUserOrderByCreatedAtDesc
+2025-12-24 14:34:38 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:38 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query HealthRecord.findByUserIdOrderByCreatedAtDesc.count
+2025-12-24 14:34:38 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:38 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query HealthRecord.countByUserId.count
+2025-12-24 14:34:38 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:38 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query HealthRecord.findByUserAccountOrderByCreatedAtDesc.count
+2025-12-24 14:34:38 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:38 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query HealthRecord.findByUserIdAndDateRange.count
+2025-12-24 14:34:38 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:38 [restartedMain] TRACE o.s.t.a.AnnotationTransactionAttributeSource - Adding transactional method 'com.example.aihealthcheck.service.HealthRecordService.save' with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2025-12-24 14:34:38 [restartedMain] TRACE o.s.t.a.AnnotationTransactionAttributeSource - Adding transactional method 'com.example.aihealthcheck.service.HealthRecordService.createHealthRecord' with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2025-12-24 14:34:38 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:38 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:38 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query HealthPrediction.findByUserIdAndRiskLevel.count
+2025-12-24 14:34:38 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:38 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query HealthPrediction.findByUserIdAndCheckDate.count
+2025-12-24 14:34:38 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:38 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query HealthPrediction.existsByUserIdAndCheckDate.count
+2025-12-24 14:34:38 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:38 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query HealthPrediction.countByUserIdAndRiskLevel.count
+2025-12-24 14:34:38 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:38 [restartedMain] DEBUG o.s.d.j.repository.query.NamedQuery - Did not find named query HealthPrediction.findByUserId.count
+2025-12-24 14:34:38 [restartedMain] DEBUG o.s.o.j.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler - Creating new EntityManager for shared EntityManager invocation
+2025-12-24 14:34:38 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-24 14:34:38 [restartedMain] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 62 mappings in 'requestMappingHandlerMapping'
+2025-12-24 14:34:38 [restartedMain] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-12-24 14:34:38 [restartedMain] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-12-24 14:34:38 [restartedMain] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-12-24 14:34:38 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-12-24 14:34:39 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2025-12-24 14:34:39 [restartedMain] INFO  c.e.a.AiHealthCheckApplication - Started AiHealthCheckApplication in 13.192 seconds (process running for 14.47)
+2025-12-24 14:34:39 [restartedMain] DEBUG o.s.orm.jpa.JpaTransactionManager - Creating new transaction with name [org.springframework.data.jpa.repository.support.SimpleJpaRepository.count]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+2025-12-24 14:34:39 [restartedMain] DEBUG o.s.orm.jpa.JpaTransactionManager - Opened new EntityManager [SessionImpl(816915197<open>)] for JPA transaction
+2025-12-24 14:34:39 [restartedMain] DEBUG o.s.jdbc.datasource.DataSourceUtils - Setting JDBC Connection [HikariProxyConnection@862468034 wrapping com.mysql.cj.jdbc.ConnectionImpl@471e4194] read-only
+2025-12-24 14:34:39 [restartedMain] DEBUG o.s.orm.jpa.JpaTransactionManager - Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@b5920]
+2025-12-24 14:34:39 [restartedMain] TRACE o.s.t.i.TransactionInterceptor - Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.count]
+2025-12-24 14:34:39 [restartedMain] DEBUG org.hibernate.SQL -
+    /* select
+        count(*)
+    from
+        ModelFile x */ select
+            count(*)
+        from
+            model_files mf1_0
+Hibernate:
+    /* select
+        count(*)
+    from
+        ModelFile x */ select
+            count(*)
+        from
+            model_files mf1_0
+2025-12-24 14:34:39 [restartedMain] TRACE o.s.t.i.TransactionInterceptor - Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.count]
+2025-12-24 14:34:39 [restartedMain] DEBUG o.s.orm.jpa.JpaTransactionManager - Initiating transaction commit
+2025-12-24 14:34:39 [restartedMain] DEBUG o.s.orm.jpa.JpaTransactionManager - Committing JPA transaction on EntityManager [SessionImpl(816915197<open>)]
+2025-12-24 14:34:39 [restartedMain] DEBUG o.s.jdbc.datasource.DataSourceUtils - Resetting read-only flag of JDBC Connection [HikariProxyConnection@862468034 wrapping com.mysql.cj.jdbc.ConnectionImpl@471e4194]
+2025-12-24 14:34:39 [restartedMain] DEBUG o.s.orm.jpa.JpaTransactionManager - Closing JPA EntityManager [SessionImpl(816915197<open>)] after transaction
+2025-12-24 14:37:53 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-24 14:37:53 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-12-24 14:37:53 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2025-12-24 14:37:53 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2025-12-24 14:37:53 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2025-12-24 14:37:53 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@7b6c109d
+2025-12-24 14:37:53 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@2d756be4
+2025-12-24 14:37:53 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-12-24 14:37:53 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2025-12-24 14:37:53 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - GET "/user", parameters={}
+2025-12-24 14:37:53 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.aihealthcheck.controller.HomeController#user()
+2025-12-24 14:37:53 [http-nio-8080-exec-1] DEBUG o.s.o.j.s.OpenEntityManagerInViewInterceptor - Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2025-12-24 14:37:53 [http-nio-8080-exec-1] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2025-12-24 14:37:53 [http-nio-8080-exec-1] DEBUG o.s.o.j.s.OpenEntityManagerInViewInterceptor - Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2025-12-24 14:37:53 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2025-12-24 14:37:53 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - GET "/css/common.css", parameters={}
+2025-12-24 14:37:53 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - GET "/css/user.css", parameters={}
+2025-12-24 14:37:53 [http-nio-8080-exec-3] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-12-24 14:37:53 [http-nio-8080-exec-2] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-12-24 14:37:53 [http-nio-8080-exec-3] DEBUG o.s.o.j.s.OpenEntityManagerInViewInterceptor - Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2025-12-24 14:37:53 [http-nio-8080-exec-2] DEBUG o.s.o.j.s.OpenEntityManagerInViewInterceptor - Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2025-12-24 14:37:53 [http-nio-8080-exec-2] DEBUG o.s.o.j.s.OpenEntityManagerInViewInterceptor - Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2025-12-24 14:37:53 [http-nio-8080-exec-3] DEBUG o.s.o.j.s.OpenEntityManagerInViewInterceptor - Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2025-12-24 14:37:53 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2025-12-24 14:37:53 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2025-12-24 14:37:53 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - GET "/js/user.js", parameters={}
+2025-12-24 14:37:53 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - GET "/js/common.js", parameters={}
+2025-12-24 14:37:53 [http-nio-8080-exec-4] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-12-24 14:37:53 [http-nio-8080-exec-5] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-12-24 14:37:53 [http-nio-8080-exec-4] DEBUG o.s.o.j.s.OpenEntityManagerInViewInterceptor - Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2025-12-24 14:37:53 [http-nio-8080-exec-5] DEBUG o.s.o.j.s.OpenEntityManagerInViewInterceptor - Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2025-12-24 14:37:53 [http-nio-8080-exec-4] DEBUG o.s.o.j.s.OpenEntityManagerInViewInterceptor - Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2025-12-24 14:37:53 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2025-12-24 14:37:53 [http-nio-8080-exec-5] DEBUG o.s.o.j.s.OpenEntityManagerInViewInterceptor - Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2025-12-24 14:37:53 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2025-12-24 14:37:54 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - GET "/images/%E6%AC%A2%E8%BF%8E%E6%A8%AA%E5%B9%85.jpg", parameters={}
+2025-12-24 14:37:54 [http-nio-8080-exec-6] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-12-24 14:37:54 [http-nio-8080-exec-6] DEBUG o.s.o.j.s.OpenEntityManagerInViewInterceptor - Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2025-12-24 14:37:54 [http-nio-8080-exec-6] DEBUG o.s.w.s.r.ResourceHttpRequestHandler - Resource not found
+2025-12-24 14:37:54 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource images/%E6%AC%A2%E8%BF%8E%E6%A8%AA%E5%B9%85.jpg.]
+2025-12-24 14:37:54 [http-nio-8080-exec-6] DEBUG o.s.o.j.s.OpenEntityManagerInViewInterceptor - Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2025-12-24 14:37:54 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Completed 404 NOT_FOUND
+2025-12-24 14:37:54 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - "ERROR" dispatch for GET "/error", parameters={}
+2025-12-24 14:37:54 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2025-12-24 14:37:54 [http-nio-8080-exec-6] DEBUG o.s.o.j.s.OpenEntityManagerInViewInterceptor - Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2025-12-24 14:37:54 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json;q=0.8', given [image/avif, image/webp, image/apng, image/svg+xml, image/*, */*;q=0.8] and supported [application/json, application/*+json]
+2025-12-24 14:37:54 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [{timestamp=Wed Dec 24 14:37:54 CST 2025, status=404, error=Not Found, trace=org.springframework.web. (truncated)...]
+2025-12-24 14:37:54 [http-nio-8080-exec-6] DEBUG o.s.o.j.s.OpenEntityManagerInViewInterceptor - Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2025-12-24 14:37:54 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 404
+2025-12-24 14:37:54 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - GET "/favicon.ico", parameters={}
+2025-12-24 14:37:54 [http-nio-8080-exec-7] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-12-24 14:37:54 [http-nio-8080-exec-7] DEBUG o.s.o.j.s.OpenEntityManagerInViewInterceptor - Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2025-12-24 14:37:54 [http-nio-8080-exec-7] DEBUG o.s.w.s.r.ResourceHttpRequestHandler - Resource not found
+2025-12-24 14:37:54 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2025-12-24 14:37:54 [http-nio-8080-exec-7] DEBUG o.s.o.j.s.OpenEntityManagerInViewInterceptor - Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2025-12-24 14:37:54 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - Completed 404 NOT_FOUND
+2025-12-24 14:37:54 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - "ERROR" dispatch for GET "/error", parameters={}
+2025-12-24 14:37:54 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2025-12-24 14:37:54 [http-nio-8080-exec-7] DEBUG o.s.o.j.s.OpenEntityManagerInViewInterceptor - Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2025-12-24 14:37:54 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json;q=0.8', given [image/avif, image/webp, image/apng, image/svg+xml, image/*, */*;q=0.8] and supported [application/json, application/*+json]
+2025-12-24 14:37:54 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [{timestamp=Wed Dec 24 14:37:54 CST 2025, status=404, error=Not Found, trace=org.springframework.web. (truncated)...]
+2025-12-24 14:37:54 [http-nio-8080-exec-7] DEBUG o.s.o.j.s.OpenEntityManagerInViewInterceptor - Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2025-12-24 14:37:54 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 404
+2025-12-24 14:38:09 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - GET "/user", parameters={}
+2025-12-24 14:38:09 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.aihealthcheck.controller.HomeController#user()
+2025-12-24 14:38:09 [http-nio-8080-exec-8] DEBUG o.s.o.j.s.OpenEntityManagerInViewInterceptor - Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2025-12-24 14:38:09 [http-nio-8080-exec-8] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2025-12-24 14:38:09 [http-nio-8080-exec-8] DEBUG o.s.o.j.s.OpenEntityManagerInViewInterceptor - Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2025-12-24 14:38:09 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2025-12-24 14:38:09 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - GET "/css/common.css", parameters={}
+2025-12-24 14:38:09 [http-nio-8080-exec-9] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-12-24 14:38:09 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - GET "/css/user.css", parameters={}
+2025-12-24 14:38:09 [http-nio-8080-exec-9] DEBUG o.s.o.j.s.OpenEntityManagerInViewInterceptor - Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2025-12-24 14:38:09 [http-nio-8080-exec-10] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-12-24 14:38:09 [http-nio-8080-exec-10] DEBUG o.s.o.j.s.OpenEntityManagerInViewInterceptor - Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2025-12-24 14:38:09 [http-nio-8080-exec-9] DEBUG o.s.o.j.s.OpenEntityManagerInViewInterceptor - Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2025-12-24 14:38:09 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2025-12-24 14:38:09 [http-nio-8080-exec-10] DEBUG o.s.o.j.s.OpenEntityManagerInViewInterceptor - Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2025-12-24 14:38:09 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2025-12-24 14:38:09 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - GET "/js/user.js", parameters={}
+2025-12-24 14:38:09 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - GET "/js/common.js", parameters={}
+2025-12-24 14:38:09 [http-nio-8080-exec-2] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-12-24 14:38:09 [http-nio-8080-exec-1] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-12-24 14:38:09 [http-nio-8080-exec-2] DEBUG o.s.o.j.s.OpenEntityManagerInViewInterceptor - Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2025-12-24 14:38:09 [http-nio-8080-exec-1] DEBUG o.s.o.j.s.OpenEntityManagerInViewInterceptor - Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2025-12-24 14:38:09 [http-nio-8080-exec-1] DEBUG o.s.o.j.s.OpenEntityManagerInViewInterceptor - Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2025-12-24 14:38:09 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2025-12-24 14:38:09 [http-nio-8080-exec-2] DEBUG o.s.o.j.s.OpenEntityManagerInViewInterceptor - Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2025-12-24 14:38:09 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2025-12-24 14:38:09 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - GET "/images/%E6%AC%A2%E8%BF%8E%E6%A8%AA%E5%B9%85.jpg", parameters={}
+2025-12-24 14:38:09 [http-nio-8080-exec-3] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-12-24 14:38:09 [http-nio-8080-exec-3] DEBUG o.s.o.j.s.OpenEntityManagerInViewInterceptor - Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2025-12-24 14:38:09 [http-nio-8080-exec-3] DEBUG o.s.w.s.r.ResourceHttpRequestHandler - Resource not found
+2025-12-24 14:38:09 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource images/%E6%AC%A2%E8%BF%8E%E6%A8%AA%E5%B9%85.jpg.]
+2025-12-24 14:38:09 [http-nio-8080-exec-3] DEBUG o.s.o.j.s.OpenEntityManagerInViewInterceptor - Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2025-12-24 14:38:09 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 404 NOT_FOUND
+2025-12-24 14:38:09 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - "ERROR" dispatch for GET "/error", parameters={}
+2025-12-24 14:38:09 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2025-12-24 14:38:09 [http-nio-8080-exec-3] DEBUG o.s.o.j.s.OpenEntityManagerInViewInterceptor - Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2025-12-24 14:38:09 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json;q=0.8', given [image/avif, image/webp, image/apng, image/svg+xml, image/*, */*;q=0.8] and supported [application/json, application/*+json]
+2025-12-24 14:38:09 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [{timestamp=Wed Dec 24 14:38:09 CST 2025, status=404, error=Not Found, trace=org.springframework.web. (truncated)...]
+2025-12-24 14:38:09 [http-nio-8080-exec-3] DEBUG o.s.o.j.s.OpenEntityManagerInViewInterceptor - Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2025-12-24 14:38:09 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 404
+2025-12-24 14:38:27 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - GET "/user", parameters={}
+2025-12-24 14:38:27 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.aihealthcheck.controller.HomeController#user()
+2025-12-24 14:38:27 [http-nio-8080-exec-5] DEBUG o.s.o.j.s.OpenEntityManagerInViewInterceptor - Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2025-12-24 14:38:27 [http-nio-8080-exec-5] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2025-12-24 14:38:27 [http-nio-8080-exec-5] DEBUG o.s.o.j.s.OpenEntityManagerInViewInterceptor - Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2025-12-24 14:38:27 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2025-12-24 14:38:27 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - GET "/css/common.css", parameters={}
+2025-12-24 14:38:27 [http-nio-8080-exec-4] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-12-24 14:38:27 [http-nio-8080-exec-4] DEBUG o.s.o.j.s.OpenEntityManagerInViewInterceptor - Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2025-12-24 14:38:27 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - GET "/css/user.css", parameters={}
+2025-12-24 14:38:27 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - GET "/js/common.js", parameters={}
+2025-12-24 14:38:27 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - GET "/js/user.js", parameters={}
+2025-12-24 14:38:27 [http-nio-8080-exec-6] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-12-24 14:38:27 [http-nio-8080-exec-6] DEBUG o.s.o.j.s.OpenEntityManagerInViewInterceptor - Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2025-12-24 14:38:27 [http-nio-8080-exec-7] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-12-24 14:38:27 [http-nio-8080-exec-7] DEBUG o.s.o.j.s.OpenEntityManagerInViewInterceptor - Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2025-12-24 14:38:27 [http-nio-8080-exec-8] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-12-24 14:38:27 [http-nio-8080-exec-8] DEBUG o.s.o.j.s.OpenEntityManagerInViewInterceptor - Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2025-12-24 14:38:27 [http-nio-8080-exec-4] DEBUG o.s.o.j.s.OpenEntityManagerInViewInterceptor - Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2025-12-24 14:38:27 [http-nio-8080-exec-6] DEBUG o.s.o.j.s.OpenEntityManagerInViewInterceptor - Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2025-12-24 14:38:27 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2025-12-24 14:38:27 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2025-12-24 14:38:27 [http-nio-8080-exec-8] DEBUG o.s.o.j.s.OpenEntityManagerInViewInterceptor - Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2025-12-24 14:38:27 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2025-12-24 14:38:27 [http-nio-8080-exec-7] DEBUG o.s.o.j.s.OpenEntityManagerInViewInterceptor - Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2025-12-24 14:38:27 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2025-12-24 14:38:27 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - GET "/images/%E6%AC%A2%E8%BF%8E%E6%A8%AA%E5%B9%85.jpg", parameters={}
+2025-12-24 14:38:27 [http-nio-8080-exec-9] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-12-24 14:38:27 [http-nio-8080-exec-9] DEBUG o.s.o.j.s.OpenEntityManagerInViewInterceptor - Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2025-12-24 14:38:27 [http-nio-8080-exec-9] DEBUG o.s.w.s.r.ResourceHttpRequestHandler - Resource not found
+2025-12-24 14:38:27 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource images/%E6%AC%A2%E8%BF%8E%E6%A8%AA%E5%B9%85.jpg.]
+2025-12-24 14:38:27 [http-nio-8080-exec-9] DEBUG o.s.o.j.s.OpenEntityManagerInViewInterceptor - Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2025-12-24 14:38:27 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - Completed 404 NOT_FOUND
+2025-12-24 14:38:27 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - "ERROR" dispatch for GET "/error", parameters={}
+2025-12-24 14:38:27 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2025-12-24 14:38:27 [http-nio-8080-exec-9] DEBUG o.s.o.j.s.OpenEntityManagerInViewInterceptor - Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2025-12-24 14:38:27 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json;q=0.8', given [image/avif, image/webp, image/apng, image/svg+xml, image/*, */*;q=0.8] and supported [application/json, application/*+json]
+2025-12-24 14:38:27 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [{timestamp=Wed Dec 24 14:38:27 CST 2025, status=404, error=Not Found, trace=org.springframework.web. (truncated)...]
+2025-12-24 14:38:27 [http-nio-8080-exec-9] DEBUG o.s.o.j.s.OpenEntityManagerInViewInterceptor - Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2025-12-24 14:38:27 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 404
+2025-12-24 14:41:11 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - GET "/css/user.css", parameters={}
+2025-12-24 14:41:11 [http-nio-8080-exec-5] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-12-24 14:41:11 [http-nio-8080-exec-5] DEBUG o.s.o.j.s.OpenEntityManagerInViewInterceptor - Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2025-12-24 14:41:11 [http-nio-8080-exec-5] DEBUG o.s.o.j.s.OpenEntityManagerInViewInterceptor - Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2025-12-24 14:41:11 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2025-12-24 14:41:33 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - GET "/user", parameters={}
+2025-12-24 14:41:33 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.aihealthcheck.controller.HomeController#user()
+2025-12-24 14:41:33 [http-nio-8080-exec-6] DEBUG o.s.o.j.s.OpenEntityManagerInViewInterceptor - Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2025-12-24 14:41:33 [http-nio-8080-exec-6] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2025-12-24 14:41:33 [http-nio-8080-exec-6] DEBUG o.s.o.j.s.OpenEntityManagerInViewInterceptor - Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2025-12-24 14:41:33 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2025-12-24 14:41:33 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - GET "/css/user.css", parameters={}
+2025-12-24 14:41:33 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - GET "/css/common.css", parameters={}
+2025-12-24 14:41:33 [http-nio-8080-exec-8] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-12-24 14:41:33 [http-nio-8080-exec-8] DEBUG o.s.o.j.s.OpenEntityManagerInViewInterceptor - Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2025-12-24 14:41:33 [http-nio-8080-exec-4] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-12-24 14:41:33 [http-nio-8080-exec-4] DEBUG o.s.o.j.s.OpenEntityManagerInViewInterceptor - Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2025-12-24 14:41:33 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - GET "/js/common.js", parameters={}
+2025-12-24 14:41:33 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - GET "/js/user.js", parameters={}
+2025-12-24 14:41:33 [http-nio-8080-exec-7] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-12-24 14:41:33 [http-nio-8080-exec-7] DEBUG o.s.o.j.s.OpenEntityManagerInViewInterceptor - Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2025-12-24 14:41:33 [http-nio-8080-exec-9] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-12-24 14:41:33 [http-nio-8080-exec-9] DEBUG o.s.o.j.s.OpenEntityManagerInViewInterceptor - Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2025-12-24 14:41:33 [http-nio-8080-exec-4] DEBUG o.s.o.j.s.OpenEntityManagerInViewInterceptor - Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2025-12-24 14:41:33 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2025-12-24 14:41:33 [http-nio-8080-exec-7] DEBUG o.s.o.j.s.OpenEntityManagerInViewInterceptor - Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2025-12-24 14:41:33 [http-nio-8080-exec-8] DEBUG o.s.o.j.s.OpenEntityManagerInViewInterceptor - Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2025-12-24 14:41:33 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2025-12-24 14:41:33 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2025-12-24 14:41:33 [http-nio-8080-exec-9] DEBUG o.s.o.j.s.OpenEntityManagerInViewInterceptor - Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2025-12-24 14:41:33 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2025-12-24 14:41:33 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - GET "/images/%E6%AC%A2%E8%BF%8E%E6%A8%AA%E5%B9%85.jpg", parameters={}
+2025-12-24 14:41:33 [http-nio-8080-exec-10] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-12-24 14:41:33 [http-nio-8080-exec-10] DEBUG o.s.o.j.s.OpenEntityManagerInViewInterceptor - Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2025-12-24 14:41:33 [http-nio-8080-exec-10] DEBUG o.s.w.s.r.ResourceHttpRequestHandler - Resource not found
+2025-12-24 14:41:33 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource images/%E6%AC%A2%E8%BF%8E%E6%A8%AA%E5%B9%85.jpg.]
+2025-12-24 14:41:33 [http-nio-8080-exec-10] DEBUG o.s.o.j.s.OpenEntityManagerInViewInterceptor - Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2025-12-24 14:41:33 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - Completed 404 NOT_FOUND
+2025-12-24 14:41:33 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - "ERROR" dispatch for GET "/error", parameters={}
+2025-12-24 14:41:33 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2025-12-24 14:41:33 [http-nio-8080-exec-10] DEBUG o.s.o.j.s.OpenEntityManagerInViewInterceptor - Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2025-12-24 14:41:33 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json;q=0.8', given [image/avif, image/webp, image/apng, image/svg+xml, image/*, */*;q=0.8] and supported [application/json, application/*+json]
+2025-12-24 14:41:33 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [{timestamp=Wed Dec 24 14:41:33 CST 2025, status=404, error=Not Found, trace=org.springframework.web. (truncated)...]
+2025-12-24 14:41:33 [http-nio-8080-exec-10] DEBUG o.s.o.j.s.OpenEntityManagerInViewInterceptor - Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2025-12-24 14:41:33 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 404
+<==========---> 80% EXECUTING [11m 17s]
+> :bootRun

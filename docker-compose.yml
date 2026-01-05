@@ -1,0 +1,26 @@
+services:
+  mysql:
+    # 将 mysql:8.0 改为 mysql:5.7，避开8.0的校验问题
+    image: mysql:5.7
+    container_name: ai-health-mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: WDz18708835370
+      MYSQL_USER: hanwu
+      MYSQL_PASSWORD: WDz18708835370
+      MYSQL_DATABASE: ai_health_check
+      MYSQL_CHARACTER_SET_SERVER: utf8mb4
+      MYSQL_COLLATION_SERVER: utf8mb4_general_ci
+    ports:
+      - "3307:3306"
+    volumes:
+      - ./src/main/resources/sql:/docker-entrypoint-initdb.d
+      - mysql-data:/var/lib/mysql
+    networks:
+      - app-network
+  # app服务配置保持不变...
+volumes:
+  mysql-data:
+networks:
+  app-network:
+    driver: bridge

@@ -1,0 +1,656 @@
+<!-- resources/static/templates/user.html -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>智检AI - 用户中心</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/common.css">
+  <link rel="stylesheet" href="/css/user.css">
+</head>
+<body>
+<!-- 用户端页面 -->
+<div class="page-content" id="userPage">
+  <!-- 导航栏 -->
+  <header class="main-header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <i class="fas fa-heartbeat"></i>
+          <span>智检AI</span>
+          <span class="badge">BETA</span>
+        </div>
+        <nav class="main-nav">
+          <a href="#home" class="active">
+            <i class="fas fa-home"></i> 首页
+          </a>
+          <a href="#appointment">
+            <i class="fas fa-calendar-check"></i> 预约挂号
+          </a>
+          <a href="#analysis">
+            <i class="fas fa-chart-line"></i> 指标分析
+          </a>
+          <a href="#reports">
+            <i class="fas fa-file-medical"></i> 我的报告
+          </a>
+          <a href="#health">
+            <i class="fas fa-heart"></i> 健康管理
+          </a>
+        </nav>
+        <div class="user-menu">
+          <div class="user-avatar">
+            <i class="fas fa-user"></i>
+          </div>
+          <span id="currentUser">用户</span>
+          <button class="logout-btn" onclick="logout()">
+            <i class="fas fa-sign-out-alt"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- 主要内容 -->
+  <main class="main-content">
+    <!-- 欢迎横幅 -->
+    <section class="welcome-banner" id="home">
+      <div class="container">
+        <div class="banner-content">
+          <h1>欢迎回来，<span id="displayUserName">亲爱的用户</span></h1>
+          <p>您的健康管家已准备好为您服务</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 预约挂号 -->
+    <section class="appointment-section" id="appointment">
+      <div class="container">
+        <div class="section-header">
+          <h2><i class="fas fa-calendar-check"></i> 门诊预约</h2>
+          <p>选择科室与医生，快速完成门诊预约</p>
+        </div>
+
+        <!-- 筛选栏 -->
+        <div class="appointment-filter">
+          <div class="filter-group">
+            <div class="filter-dropdown">
+              <button class="filter-btn" id="deptFilterBtn">
+                <i class="fas fa-hospital"></i>
+                <span id="selectedDept">全部科室</span>
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="dropdown-menu" id="deptDropdown">
+                <div class="dropdown-search">
+                  <i class="fas fa-search"></i>
+                  <input type="text" placeholder="搜索科室..." id="deptSearch">
+                </div>
+                <div class="dropdown-content">
+                  <!-- 科室列表将通过JS生成 -->
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="filter-group" style="flex:1">
+            <div class="inline-search">
+              <i class="fas fa-search"></i>
+              <input type="text" id="doctorSearch" placeholder="搜索医生姓名..." />
+            </div>
+          </div>
+
+          <div class="filter-group">
+            <div class="sort-options">
+              <button class="sort-btn active" data-sort="rating">
+                <i class="fas fa-star"></i> 综合排序
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="sort-dropdown">
+                <button class="sort-option" data-sort="rating">评分最高</button>
+                <button class="sort-option" data-sort="appointments">预约量最多</button>
+                <button class="sort-option" data-sort="fee">费用最低</button>
+                <button class="sort-option" data-sort="name">医生姓名</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 医生列表 -->
+        <div class="doctor-list" id="doctorList">
+          <!-- 医生卡片将通过JS动态生成 -->
+        </div>
+
+        <!-- 分页 -->
+        <div class="pagination" id="pagination">
+          <button class="page-btn prev-btn" disabled>
+            <i class="fas fa-chevron-left"></i> 上一页
+          </button>
+          <div class="page-numbers">
+            <!-- 页码将通过JS生成 -->
+          </div>
+          <button class="page-btn next-btn">
+            下一页 <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 指标分析 -->
+    <section class="analysis-section" id="analysis">
+      <div class="container">
+        <div class="section-header">
+          <h2><i class="fas fa-chart-bar"></i> 指标分析</h2>
+          <p>核心健康指标深度解析</p>
+        </div>
+
+        <div class="analysis-tabs">
+          <button class="analysis-tab active" data-tab="blood">血检分析</button>
+          <button class="analysis-tab" data-tab="urine">尿检分析</button>
+          <button class="analysis-tab" data-tab="liver">肝脏功能</button>
+          <button class="analysis-tab" data-tab="kidney">肾脏功能</button>
+        </div>
+
+        <!-- 在 user.html 的指标分析部分添加此代码 -->
+        <!-- 批量指标上传卡片 -->
+        <div class="upload-section" style="margin: 2rem 0; padding: 1.5rem; background: linear-gradient(135deg, #f8f9ff 0%, #f0f2ff 100%); border-radius: 12px; border: 1px solid #e0e7ff;">
+            <div class="section-header" style="margin-bottom: 1.5rem;">
+              <h3 style="display: flex; align-items: center; gap: 0.75rem; color: #1e40af;">
+                <i class="fas fa-file-excel" style="color: #217346;"></i>
+                批量指标上传
+              </h3>
+              <p style="color: #4b5563; margin-top: 0.5rem;">
+                上传Excel格式的体检报告，系统将自动解析指标并进行AI分析
+              </p>
+              <!-- 显示负责医生 -->
+              <div id="assignedDoctorInfo" style="margin-top: 0.5rem; display: none; padding: 0.5rem 1rem; background-color: #e0f2fe; border-radius: 6px; color: #0369a1; font-size: 0.9rem; border-left: 3px solid #0ea5e9;">
+                  <i class="fas fa-user-md"></i> 
+                  <span id="assignedDoctorText">正在加载负责医生信息...</span>
+              </div>
+            </div>
+
+            <div class="upload-container">
+            <!-- 上传区域 -->
+            <div class="upload-area" id="uploadArea"
+                 style="border: 2px dashed #93c5fd; border-radius: 10px; padding: 2.5rem; text-align: center; background-color: white; cursor: pointer; transition: all 0.3s;"
+                 onmouseover="this.style.borderColor='#3b82f6'; this.style.backgroundColor='#f8fafc';"
+                 onmouseout="this.style.borderColor='#93c5fd'; this.style.backgroundColor='white';"
+                 onclick="document.getElementById('excelFileInput').click()">
+
+              <i class="fas fa-cloud-upload-alt" style="font-size: 3rem; color: #3b82f6; margin-bottom: 1rem;"></i>
+              <h4 style="color: #1e40af; margin-bottom: 0.5rem;">点击或拖拽上传Excel文件</h4>
+              <p style="color: #6b7280; margin-bottom: 1.5rem;">支持 .xlsx 或 .xls 格式，最大50MB</p>
+
+              <button class="upload-btn" style="background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%); color: white; border: none; padding: 0.75rem 1.5rem; border-radius: 8px; font-weight: 500; cursor: pointer; display: inline-flex; align-items: center; gap: 0.5rem;">
+                <i class="fas fa-folder-open"></i> 选择文件
+              </button>
+
+              <div class="upload-hint" style="margin-top: 1.5rem; padding: 1rem; background-color: #f0f9ff; border-radius: 6px; border-left: 4px solid #3b82f6;">
+                <i class="fas fa-info-circle" style="color: #3b82f6; margin-right: 0.5rem;"></i>
+                <span style="color: #374151; font-size: 0.9rem;">
+                    <strong>模板要求：</strong>请确保Excel包含以下列：检查日期、血红蛋白、白细胞计数、血小板计数、血糖、尿蛋白、尿糖、尿比重、ALT、AST、总胆红素、肌酐、尿素氮、尿酸
+                </span>
+              </div>
+            </div>
+
+            <!-- 隐藏的文件输入 -->
+            <input type="file" id="excelFileInput" accept=".xlsx,.xls" style="display: none;" onchange="handleFileSelect(this)">
+
+            <!-- 上传状态显示 -->
+            <div id="uploadStatus" style="margin-top: 1.5rem; display: none;">
+              <div class="upload-progress" style="display: none;">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                  <span>上传中...</span>
+                  <span id="uploadPercent">0%</span>
+                </div>
+                <div style="height: 6px; background-color: #e5e7eb; border-radius: 3px; overflow: hidden;">
+                  <div id="uploadProgressBar" style="height: 100%; width: 0%; background: linear-gradient(90deg, #3b82f6 0%, #1d4ed8 100%); transition: width 0.3s;"></div>
+                </div>
+              </div>
+
+              <div id="uploadResult" style="display: none; padding: 1rem; border-radius: 8px; margin-top: 1rem;"></div>
+            </div>
+          </div>
+
+          <!-- 模板下载 -->
+          <div style="margin-top: 1.5rem; text-align: center;">
+            <a href="#" onclick="downloadTemplate()" style="color: #3b82f6; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem;">
+              <i class="fas fa-download"></i>
+              <span>下载Excel模板文件</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="analysis-content">
+          <!-- 血检分析 -->
+          <div class="tab-content active" id="bloodTab">
+            <div class="metric-cards">
+              <div class="metric-card">
+                <div class="metric-header">
+                  <h4>血红蛋白</h4>
+                  <span class="status normal">正常</span>
+                </div>
+                <div class="metric-value">135 g/L</div>
+                <div class="metric-range">参考值: 120-160 g/L</div>
+                <div class="metric-trend">
+                  <i class="fas fa-arrow-up trend-up"></i>
+                  <span>较上次上升 2%</span>
+                </div>
+              </div>
+
+              <div class="metric-card">
+                <div class="metric-header">
+                  <h4>白细胞计数</h4>
+                  <span class="status normal">正常</span>
+                </div>
+                <div class="metric-value">6.8 ×10⁹/L</div>
+                <div class="metric-range">参考值: 4-10 ×10⁹/L</div>
+              </div>
+
+              <div class="metric-card">
+                <div class="metric-header">
+                  <h4>血小板计数</h4>
+                  <span class="status warning">偏低</span>
+                </div>
+                <div class="metric-value">85 ×10⁹/L</div>
+                <div class="metric-range">参考值: 100-300 ×10⁹/L</div>
+                <div class="metric-trend">
+                  <i class="fas fa-arrow-down trend-down"></i>
+                  <span>较上次下降 8%</span>
+                </div>
+              </div>
+
+              <div class="metric-card">
+                <div class="metric-header">
+                  <h4>血糖</h4>
+                  <span class="status alert">偏高</span>
+                </div>
+                <div class="metric-value">7.2 mmol/L</div>
+                <div class="metric-range">参考值: 3.9-6.1 mmol/L</div>
+                <div class="ai-insight">
+                  <i class="fas fa-robot"></i>
+                  <span>AI建议：建议控制糖分摄入，定期监测</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="ai-analysis">
+              <h3><i class="fas fa-brain"></i> AI智能分析</h3>
+              <p>您的血常规指标整体良好，但血糖偏高且血小板偏低，可能与近期饮食和压力有关。建议增加维生素B12摄入。</p>
+              <div class="recommendations">
+                <h4>健康建议：</h4>
+                <ul>
+                  <li>控制甜食和精制碳水摄入</li>
+                  <li>增加深绿色蔬菜摄入</li>
+                  <li>保持充足睡眠，减轻压力</li>
+                  <li>两周后复查血小板</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- 尿检分析 -->
+          <div class="tab-content" id="urineTab">
+            <div class="metric-cards">
+              <div class="metric-card">
+                <div class="metric-header">
+                  <h4>尿蛋白</h4>
+                  <span class="status normal">阴性</span>
+                </div>
+                <div class="metric-value">-</div>
+                <div class="metric-range">参考值: 阴性</div>
+              </div>
+
+              <div class="metric-card">
+                <div class="metric-header">
+                  <h4>尿糖</h4>
+                  <span class="status warning">弱阳性</span>
+                </div>
+                <div class="metric-value">±</div>
+                <div class="metric-range">参考值: 阴性</div>
+              </div>
+
+              <div class="metric-card">
+                <div class="metric-header">
+                  <h4>尿比重</h4>
+                  <span class="status normal">正常</span>
+                </div>
+                <div class="metric-value">1.018</div>
+                <div class="metric-range">参考值: 1.003-1.030</div>
+              </div>
+            </div>
+
+            <div class="ai-analysis">
+              <h3><i class="fas fa-brain"></i> AI智能分析</h3>
+              <p>尿检结果显示尿糖弱阳性，与血糖偏高结果一致，建议关注糖代谢情况。</p>
+            </div>
+          </div>
+
+          <!-- 肝脏功能 -->
+          <div class="tab-content" id="liverTab">
+            <div class="metric-cards">
+              <div class="metric-card">
+                <div class="metric-header">
+                  <h4>ALT (谷丙转氨酶)</h4>
+                  <span class="status normal">正常</span>
+                </div>
+                <div class="metric-value">28 U/L</div>
+                <div class="metric-range">参考值: 0-40 U/L</div>
+              </div>
+
+              <div class="metric-card">
+                <div class="metric-header">
+                  <h4>AST (谷草转氨酶)</h4>
+                  <span class="status normal">正常</span>
+                </div>
+                <div class="metric-value">25 U/L</div>
+                <div class="metric-range">参考值: 0-40 U/L</div>
+              </div>
+
+              <div class="metric-card">
+                <div class="metric-header">
+                  <h4>总胆红素</h4>
+                  <span class="status normal">正常</span>
+                </div>
+                <div class="metric-value">15 μmol/L</div>
+                <div class="metric-range">参考值: 5-21 μmol/L</div>
+              </div>
+            </div>
+
+            <div class="ai-analysis">
+              <h3><i class="fas fa-brain"></i> AI智能分析</h3>
+              <p>肝脏功能指标均在正常范围内，肝功能良好。继续保持健康生活方式。</p>
+            </div>
+          </div>
+
+          <!-- 肾脏功能 -->
+          <div class="tab-content" id="kidneyTab">
+            <div class="metric-cards">
+              <div class="metric-card">
+                <div class="metric-header">
+                  <h4>肌酐</h4>
+                  <span class="status normal">正常</span>
+                </div>
+                <div class="metric-value">85 μmol/L</div>
+                <div class="metric-range">参考值: 59-104 μmol/L</div>
+              </div>
+
+              <div class="metric-card">
+                <div class="metric-header">
+                  <h4>尿素氮</h4>
+                  <span class="status normal">正常</span>
+                </div>
+                <div class="metric-value">5.2 mmol/L</div>
+                <div class="metric-range">参考值: 2.9-8.2 mmol/L</div>
+              </div>
+
+              <div class="metric-card">
+                <div class="metric-header">
+                  <h4>尿酸</h4>
+                  <span class="status warning">偏高</span>
+                </div>
+                <div class="metric-value">480 μmol/L</div>
+                <div class="metric-range">参考值: 208-428 μmol/L</div>
+                <div class="ai-insight">
+                  <i class="fas fa-robot"></i>
+                  <span>AI建议：减少高嘌呤食物摄入</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="ai-analysis">
+              <h3><i class="fas fa-brain"></i> AI智能分析</h3>
+              <p>肾功能基本正常，但尿酸偏高，需注意痛风风险。建议多饮水，减少海鲜、动物内脏摄入。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 健康预测 -->
+    <section class="prediction-section">
+      <div class="container">
+        <div class="section-header">
+          <h2><i class="fas fa-crystal-ball"></i> 健康风险预测</h2>
+          <p>基于AI算法的未来健康趋势分析</p>
+        </div>
+
+        <div class="prediction-cards" id="predictionCardsContainer">
+          <div class="loading-prediction" style="text-align: center; width: 100%; padding: 2rem; color: #64748b;">
+             <i class="fas fa-spinner fa-spin"></i> 正在加载健康预测数据...
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="reports-section section-anchor" id="reports">
+      <div class="container">
+        <div class="section-header">
+          <h2><i class="fas fa-file-medical-alt"></i> 我的体检报告</h2>
+          <p>查看您的历史体检报告和健康指标</p>
+        </div>
+
+        <!-- 患者基本信息 -->
+        <div class="patient-info-card">
+          <div class="patient-info-header">
+            <h3><i class="fas fa-user"></i> 患者信息</h3>
+            <button class="btn btn-outline" onclick="refreshReports()">
+              <i class="fas fa-sync-alt"></i> 刷新
+            </button>
+          </div>
+          <div class="patient-info-content">
+            <div class="info-row">
+              <div class="info-col">
+                <label><i class="fas fa-id-card"></i> 姓名</label>
+                <span id="reportUserName">--</span>
+              </div>
+              <div class="info-col">
+                <label><i class="fas fa-venus-mars"></i> 性别</label>
+                <span id="reportUserGender">--</span>
+              </div>
+              <div class="info-col">
+                <label><i class="fas fa-birthday-cake"></i> 年龄</label>
+                <span id="reportUserAge">--</span>
+              </div>
+              <div class="info-col">
+                <label><i class="fas fa-user-tag"></i> 账号ID</label>
+                <span id="reportUserId">--</span>
+              </div>
+            </div>
+            <div class="info-row">
+              <div class="info-col">
+                <label><i class="fas fa-hospital"></i> 医疗卡号</label>
+                <span id="medicalCardNumber">--</span>
+              </div>
+              <div class="info-col">
+                <label><i class="fas fa-calendar-alt"></i> 最近体检时间</label>
+                <span id="lastExamDate">--</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 报告类型切换 -->
+        <div class="report-type-tabs">
+          <button class="report-type-tab active" onclick="showReportType('blood')">
+            <i class="fas fa-tint"></i> 血常规报告
+          </button>
+          <button class="report-type-tab" onclick="showReportType('urine')">
+            <i class="fas fa-flask"></i> 尿常规报告
+          </button>
+          <button class="report-type-tab" onclick="showReportType('kidney')">
+            <i class="fas fa-filter"></i> 肾功能报告
+          </button>
+          <button class="report-type-tab" onclick="showReportType('liver')">
+            <i class="fas fa-leaf"></i> 肝功能报告
+          </button>
+        </div>
+
+        <!-- 报告内容 -->
+        <div class="report-content-container">
+          <!-- 血常规报告 -->
+          <div class="report-type-content active" id="bloodReport">
+            <div class="report-table-wrapper">
+              <table class="report-table">
+                <thead>
+                <tr>
+                  <th width="120">卡号</th>
+                  <th width="200">小项名称</th>
+                  <th width="150">检测结果</th>
+                  <th width="150">参考值</th>
+                  <th width="100">状态</th>
+                </tr>
+                </thead>
+                <tbody id="bloodReportBody">
+                <!-- 血常规报告数据将通过JS动态生成 -->
+                <tr>
+                  <td colspan="5" class="loading-row">
+                    <i class="fas fa-spinner fa-spin"></i> 正在加载血常规报告数据...
+                  </td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- 尿常规报告 -->
+          <div class="report-type-content" id="urineReport">
+            <div class="report-table-wrapper">
+              <table class="report-table">
+                <thead>
+                <tr>
+                  <th width="120">卡号</th>
+                  <th width="200">小项名称</th>
+                  <th width="150">检测结果</th>
+                  <th width="150">参考值</th>
+                  <th width="100">状态</th>
+                </tr>
+                </thead>
+                <tbody id="urineReportBody">
+                <!-- 尿常规报告数据将通过JS动态生成 -->
+                <tr>
+                  <td colspan="5" class="loading-row">
+                    <i class="fas fa-spinner fa-spin"></i> 正在加载尿常规报告数据...
+                  </td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- 肾功能报告 -->
+          <div class="report-type-content" id="kidneyReport">
+            <div class="report-table-wrapper">
+              <table class="report-table">
+                <thead>
+                <tr>
+                  <th width="120">卡号</th>
+                  <th width="200">小项名称</th>
+                  <th width="150">检测结果</th>
+                  <th width="150">参考值</th>
+                  <th width="100">状态</th>
+                </tr>
+                </thead>
+                <tbody id="kidneyReportBody">
+                <!-- 肾功能报告数据将通过JS动态生成 -->
+                <tr>
+                  <td colspan="5" class="loading-row">
+                    <i class="fas fa-spinner fa-spin"></i> 正在加载肾功能报告数据...
+                  </td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- 肝功能报告 -->
+          <div class="report-type-content" id="liverReport">
+            <div class="report-table-wrapper">
+              <table class="report-table">
+                <thead>
+                <tr>
+                  <th width="120">卡号</th>
+                  <th width="200">小项名称</th>
+                  <th width="150">检测结果</th>
+                  <th width="150">参考值</th>
+                  <th width="100">状态</th>
+                </tr>
+                </thead>
+                <tbody id="liverReportBody">
+                <!-- 肝功能报告数据将通过JS动态生成 -->
+                <tr>
+                  <td colspan="5" class="loading-row">
+                    <i class="fas fa-spinner fa-spin"></i> 正在加载肝功能报告数据...
+                  </td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- 医生建议 -->
+        <div class="doctor-suggestion-box">
+          <h4><i class="fas fa-user-md"></i> 医生建议</h4>
+          <div class="suggestion-content">
+            <div class="suggestion-header">
+              <div class="doctor-info">
+                <div class="doctor-avatar-sm">
+                  <i class="fas fa-user-md"></i>
+                </div>
+                <div>
+                  <div class="doctor-name">医生</div>
+                </div>
+              </div>
+            </div>
+            <div class="suggestion-text" id="doctorSuggestionText">
+              <!-- 医生建议内容将通过JS动态加载 -->
+              <div class="loading-suggestion">
+                <i class="fas fa-spinner fa-spin"></i> 正在加载医生建议...
+              </div>
+            </div>
+            <div class="suggestion-footer">
+          <span class="suggestion-tag">
+            <i class="fas fa-hospital"></i> 智检AI医院
+          </span>
+              <span class="suggestion-tag">
+            <i class="fas fa-file-medical"></i> 体检报告建议
+          </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 底部 -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>智检AI</h4>
+          <p>用科技守护您的健康</p>
+        </div>
+        <div class="footer-section">
+          <h4>服务支持</h4>
+          <a href="#">客服中心</a>
+          <a href="#">使用指南</a>
+          <a href="#">常见问题</a>
+        </div>
+        <div class="footer-section">
+          <h4>关于我们</h4>
+          <a href="#">公司介绍</a>
+          <a href="#">隐私政策</a>
+          <a href="#">用户协议</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 智检AI智能体检平台. 保留所有权利</p>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<script src="/js/common.js"></script>
+<script src="/js/user.js"></script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.2.0'
+    id 'io.spring.dependency-management' version '1.1.4'
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+
+java {
+    sourceCompatibility = '17'
+    targetCompatibility = '17'
+}
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+repositories {
+    maven { url 'https://maven.aliyun.com/repository/public/' }
+    maven { url 'https://maven.aliyun.com/repository/google/' }
+    mavenCentral()
+}
+
+dependencies {
+    // Web
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    // 数据库
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    runtimeOnly 'com.mysql:mysql-connector-j'
+
+    // 模板引擎
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+
+    // 开发工具
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+
+    // JPA (重要)
+    implementation 'javax.persistence:javax.persistence-api:2.2'
+
+    // Excel处理依赖 (新增)
+    implementation 'org.apache.poi:poi:5.2.4'
+    implementation 'org.apache.poi:poi-ooxml:5.2.4'
+
+    // 可选：如果需要处理旧版.xls格式
+    implementation 'org.apache.poi:poi-ooxml-full:5.2.4'
+
+
+    // 测试
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
+
+// ============ 仅添加这一行 ============
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+// 跳过测试
+test {
+    enabled = false
+}
+
+// 配置 bootRun
+bootRun {
+    systemProperties = System.properties
+}

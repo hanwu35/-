@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>智检AI - 医生工作站</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/common.css">
+  <link rel="stylesheet" href="/css/doctor.css">
+  <link rel="stylesheet" href="/css/doctor-report.css">
+</head>
+<body>
+<!-- 医生端页面 -->
+<div class="page-content" id="doctorPage">
+  <!-- 医生端头部 -->
+  <header class="main-header doctor-header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <i class="fas fa-user-md"></i>
+          <span>医生工作站</span>
+        </div>
+        <nav class="main-nav">
+          <a href="#dashboard" class="active">
+            <i class="fas fa-tachometer-alt"></i> 仪表盘
+          </a>
+          <a href="#patients">
+            <i class="fas fa-users"></i> 患者管理
+          </a>
+          <a href="#reports">
+            <i class="fas fa-file-medical-alt"></i> 报告审核
+          </a>
+          <a href="#analytics">
+            <i class="fas fa-chart-bar"></i> 数据分析
+          </a>
+        </nav>
+        <div class="user-menu">
+          <div class="doctor-avatar">
+            <i class="fas fa-user-md"></i>
+          </div>
+          <div class="user-info">
+            <span id="doctorName">医生</span>
+            <small id="doctorDept">全科</small>
+          </div>
+          <button class="logout-btn" onclick="logout()">
+            <i class="fas fa-sign-out-alt"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- 医生端内容 -->
+  <main class="main-content">
+    <!-- 医生仪表盘 -->
+    <section class="doctor-dashboard" id="dashboard">
+      <div class="container">
+        <div class="dashboard-header">
+          <h1>医生工作站</h1>
+          <p>今日：<span id="todayDate"></span></p>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-icon">
+              <i class="fas fa-users"></i>
+            </div>
+            <div class="stat-content">
+              <h3 id="patientCount">12</h3>
+              <p>今日患者</p>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon">
+              <i class="fas fa-file-medical"></i>
+            </div>
+            <div class="stat-content">
+              <h3 id="pendingReports">8</h3>
+              <p>待审报告</p>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon">
+              <i class="fas fa-comments"></i>
+            </div>
+            <div class="stat-content">
+              <h3 id="messages">5</h3>
+              <p>未读消息</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 患者列表 -->
+        <div class="doctor-section">
+          <div class="section-header">
+            <h2><i class="fas fa-list"></i> 今日患者列表</h2>
+            <button class="btn btn-primary" onclick="refreshPatientList()">刷新</button>
+          </div>
+          <div class="patient-table">
+            <div class="table-header">
+              <div>患者姓名</div>
+              <div>检查项目</div>
+              <div>状态</div>
+              <div>操作</div>
+            </div>
+            <div class="table-row">
+              <div class="patient-info">
+                <div class="patient-avatar">张</div>
+                <div>
+                  <strong>张三</strong>
+                  <small>男 · 35岁</small>
+                </div>
+              </div>
+              <div>血检 + 尿检</div>
+              <div><span class="status-badge pending">待审核</span></div>
+              <div>
+                <button class="btn btn-sm btn-primary view-report-btn" data-patient-id="001">查看报告</button>
+                <button class="btn btn-sm btn-outline">联系患者</button>
+              </div>
+            </div>
+            <div class="table-row">
+              <div class="patient-info">
+                <div class="patient-avatar">李</div>
+                <div>
+                  <strong>李四</strong>
+                  <small>女 · 42岁</small>
+                </div>
+              </div>
+              <div>全面体检</div>
+              <div><span class="status-badge completed">已审核</span></div>
+              <div>
+                <button class="btn btn-sm btn-primary view-report-btn" data-patient-id="002">查看报告</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 医生端底部 -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>医生工作站</h4>
+          <p>专业医疗分析平台</p>
+        </div>
+        <div class="footer-section">
+          <h4>技术支持</h4>
+          <a href="#">医学知识库</a>
+          <a href="#">操作指南</a>
+          <a href="#">紧急支持</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 智检AI医生工作站. 仅供专业医疗人员使用.</p>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<!-- 患者报告查看模态框 - 新增部分 -->
+<div class="report-modal hidden" id="reportModal">
+  <div class="report-container">
+    <div class="report-header">
+      <div class="report-title">
+        <i class="fas fa-file-medical-alt"></i>
+        <h3>患者体检报告</h3>
+      </div>
+      <button class="report-close" id="reportClose">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+
+    <!-- 患者基本信息 -->
+    <div class="patient-info-section">
+      <div class="patient-basic-info">
+        <div class="info-item">
+          <i class="fas fa-user"></i>
+          <div>
+            <label>姓名</label>
+            <span id="reportPatientName">张三</span>
+          </div>
+        </div>
+        <div class="info-item">
+          <i class="fas fa-venus-mars"></i>
+          <div>
+            <label>性别</label>
+            <span id="reportPatientGender">男</span>
+          </div>
+        </div>
+        <div class="info-item">
+          <i class="fas fa-birthday-cake"></i>
+          <div>
+            <label>年龄</label>
+            <span id="reportPatientAge">35岁</span>
+          </div>
+        </div>
+      </div>
+      <div class="report-time">
+        <i class="fas fa-calendar-alt"></i>
+        <span id="reportDate">2025-12-15</span>
+      </div>
+    </div>
+
+    <div class="report-content">
+      <!-- 患者检查结果 -->
+      <div class="report-section" id="patientResults">
+        <div class="section-header">
+          <h4><i class="fas fa-clipboard-check"></i> 患者检查结果</h4>
+        </div>
+        <div class="results-grid" id="testResultsGrid">
+          <!-- 检查结果将通过JS动态生成 -->
+          <div class="loading">加载检查结果...</div>
+        </div>
+      </div>
+
+      <!-- 检测报告（AI分析） -->
+      <div class="report-section">
+        <div class="section-header">
+          <h4><i class="fas fa-robot"></i> AI检测报告</h4>
+          <span class="report-tag">自动生成</span>
+        </div>
+        <div class="ai-report-content" id="aiReportContent">
+          <!-- AI报告内容将通过JS动态生成 -->
+          <p class="loading">正在加载AI分析报告...</p>
+        </div>
+      </div>
+
+      <!-- 医生建议编辑区 -->
+      <div class="report-section">
+        <div class="section-header">
+          <h4><i class="fas fa-user-md"></i> 医生建议编辑</h4>
+          <span class="report-tag">医生填写</span>
+        </div>
+        <div class="doctor-advice-editor">
+          <textarea
+                  id="doctorAdvice"
+                  placeholder="请输入针对该患者的医疗建议、注意事项、后续治疗方案等..."
+                  rows="6"></textarea>
+          <div class="advice-tips">
+            <i class="fas fa-lightbulb"></i>
+            <span>建议包含：诊断结论、治疗建议、生活指导、复查时间等</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 操作按钮 -->
+      <div class="report-actions">
+        <button class="btn btn-outline" id="saveDraftBtn">
+          <i class="fas fa-save"></i> 保存草稿
+        </button>
+        <button class="btn btn-primary" id="sendReportBtn">
+          <i class="fas fa-paper-plane"></i> 发送报告给患者
+        </button>
+        <button class="btn btn-outline" id="printReportBtn">
+          <i class="fas fa-print"></i> 打印报告
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="/js/common.js"></script>
+<script src="/js/doctor.js"></script>
+<script src="/js/doctor-report.js"></script>
+</body>
+</html>

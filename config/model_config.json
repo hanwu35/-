@@ -1,0 +1,16 @@
+{
+  "model_paths": {
+    "liver": "src/main/resources/static/models/liver_model.pkl",
+    "urine": "src/main/resources/static/models/urine_model.pkl",
+    "kidney": "src/main/resources/static/models/kidney_model.pkl",
+    "blood": "src/main/resources/static/models/blood_model.pkl"
+  },
+  "script_paths": {
+    "liver": "scripts/liver_model.py",
+    "urine": "scripts/urine_model.py",
+    "kidney": "scripts/kidney_model.py",
+    "blood": "scripts/blood_model.py"
+  },
+  "timeout_seconds": 300,
+  "python_path": "python3"
+}
